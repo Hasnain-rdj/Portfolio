@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Linking font-awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="profile-card">
+                <div class="profile-image-container">
+                    <a href="https://www.upwork.com/freelancers/hasnainn31"><img src="GitHub Profile Picture.png"
+                            alt="Profile Picture" class="profile-img"></a>
+                </div>
+                <div class="profile-description">
+                    <p>Hi! I’m Hasnain, an experienced software developer specializing in desktop applications using
+                        C++,
+                        C#, and C. I also excel in UML design and focus on creating reliable, user-friendly solutions
+                        that
+                        exceed client expectations. Let’s collaborate to bring your ideas to life!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills">
+                <div class="skill" style="background-image: url('https://www.example.com/software-bg.jpg');">
+                    <h3>Software Developer</h3>
+                    <i class="fas fa-laptop-code"></i>
+                    <p>Skilled in developing software solutions using various programming languages and frameworks.</p>
+                </div>
+                <div class="skill" style="background-image: url('https://www.example.com/uml-bg.jpg');">
+                    <h3>UML Designer</h3>
+                    <i class="fas fa-project-diagram"></i>
+                    <p>Experienced in designing UML diagrams for visualizing system architecture and workflows.</p>
+                </div>
+                <div class="skill" style="background-image: url('https://www.example.com/java-bg.jpg');">
+                    <h3>Java Programmer</h3>
+                    <i class="fab fa-java"></i>
+                    <p>Proficient in building scalable, secure applications using Java.</p>
+                </div>
+                <div class="skill" style="background-image: url('https://www.example.com/python-bg.jpg');">
+                    <h3>Python Programmer</h3>
+                    <i class="fab fa-python"></i>
+                    <p>Experienced in solving complex problems and building efficient applications using Python.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required=""></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Muhammad Hasnain - All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
