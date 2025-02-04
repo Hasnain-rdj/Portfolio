@@ -56,6 +56,7 @@ nav ul li a:hover {
 }
 
 .profile-image-container {
+    background-color: rgb(90, 106, 108);
     margin-bottom: 20px;
     border-radius: 50%;
     width: 180px;
@@ -63,6 +64,7 @@ nav ul li a:hover {
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease;
+
 }
 
 .profile-image-container:hover {
@@ -74,6 +76,7 @@ nav ul li a:hover {
     height: 100%;
     object-fit: cover;
     transition: opacity 0.3s ease;
+    opacity: 0.90;
 }
 
 .profile-description {
@@ -116,7 +119,7 @@ nav ul li a:hover {
 
 /* Profile Image Hover */
 .profile-img:hover {
-    opacity: 0.8;
+    opacity: 1;
     cursor: pointer;
 }
 
