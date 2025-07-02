@@ -1,0 +1,30 @@
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary-light);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+body.light #theme-toggle {
+    background: var(--accent-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#theme-toggle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 188, 212, 0.4);
+}

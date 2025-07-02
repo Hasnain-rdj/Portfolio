@@ -7,23 +7,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Check for saved theme preference in localStorage
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-        body.classList.add("dark-mode");
-        toggleBtn.innerHTML = "🌞"; // Sun icon for dark mode
-    } else {
+    if (savedTheme === "light") {
+        body.classList.add("light");
         toggleBtn.innerHTML = "🌙"; // Moon icon for light mode
+        
+        // Apply light theme to other elements
+        document.querySelectorAll("header, section, footer").forEach(element => {
+            element.classList.add("light");
+        });
+    } else {
+        body.classList.remove("light");
+        toggleBtn.innerHTML = "🌞"; // Sun icon for dark mode
     }
 
     // Toggle Dark/Light Mode
     toggleBtn.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-        const isDark = body.classList.contains("dark-mode");
+        const isLight = body.classList.toggle("light");
 
         // Save the theme preference in localStorage
-        localStorage.setItem("theme", isDark ? "dark" : "light");
+        localStorage.setItem("theme", isLight ? "light" : "dark");
 
         // Update the toggle button icon
-        toggleBtn.innerHTML = isDark ? "🌞" : "🌙";
+        toggleBtn.innerHTML = isLight ? "🌙" : "🌞";
+        
+        // Apply theme to specific elements
+        document.querySelectorAll("header, section, footer").forEach(element => {
+            if (isLight) {
+                element.classList.add("light");
+            } else {
+                element.classList.remove("light");
+            }
+        });
     });
 
     // Smooth scrolling for anchor links
@@ -53,4 +67,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     typewriter();
+
+    // Make project cards keyboard accessible
+    document.querySelectorAll('.project-category').forEach(card => {
+        card.addEventListener('keydown', (e) => {
+            // If Enter or Space key is pressed
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                // Get the link URL from the onclick attribute
+                const url = card.getAttribute('onclick').match(/'([^']+)'/)[1];
+                window.open(url, '_blank');
+            }
+        });
+    });
 });
