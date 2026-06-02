@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("theme-toggle");
     const body = document.body;
     const typewriterElement = document.getElementById("typewriter");
-    const texts = ["Software Engineer", "UML Designer", "Java Programmer", "Python Developer", "Problem Solver", "Tech Innovator"];
+    const texts = ["Software Engineer", "DevOps Engineer", "AI Enthusiastic", "Python Developer", "Problem Solver", "Tech Innovator"];
     let textIndex = 0, charIndex = 0, isDeleting = false;
 
     // === Enhanced Theme System ===
