@@ -4,14 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Hasnain- Portfolio</title>
+    <title>Muhammad Hasnain | DevOps Engineer & Full-Stack Developer</title>
+    <meta name="description"
+        content="Portfolio of Muhammad Hasnain - Software Engineer, DevOps Engineer & Full-Stack Developer specializing in CI/CD, Cloud Infrastructure (AWS, Terraform, Kubernetes), Next.js, and Node.js.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
-    <!-- Loading Animation -->
+    <!-- Ambient Cursor Glow Spotlight -->
+    <div id="cursor-glow"></div>
+
+    <!-- Loading Screen -->
     <div id="loading-screen">
         <div class="loading-container">
             <div class="loading-logo">
@@ -19,302 +24,853 @@
             </div>
             <div class="loading-text">
                 <h2>Muhammad Hasnain</h2>
-                <p>Portfolio Loading...</p>
+                <p>&gt; Initializing DevOps &amp; Full-Stack Core...</p>
             </div>
             <div class="loading-bar">
                 <div class="loading-progress"></div>
             </div>
             <div class="loading-percentage">0%</div>
         </div>
-        <div class="loading-particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
+    </div>
+
+    <!-- Particle Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="main-wrapper">
+        <!-- Floating Navigation Header -->
+        <header>
+            <a href="#hero" class="nav-brand">
+                <div class="brand-logo">MH</div>
+                <span class="brand-name">Hasnain.dev</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#terminal">CLI Terminal</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>Available for DevOps &amp; Full-Stack Roles</span>
+            </div>
+
+            <h1 class="hero-title">
+                Muhammad <span class="name-highlight">Hasnain</span>
+            </h1>
+
+            <div class="typewriter-box">
+                <span class="typewriter-prefix">I am a</span>
+                <span id="typewriter"></span>
+            </div>
+
+            <p class="hero-desc">
+                Software Engineering Senior specializing in cloud infrastructure, CI/CD pipeline automation, container
+                orchestration, and high-performance full-stack web applications. Bridging developer logic with resilient
+                cloud operations.
+            </p>
+
+            <!-- Interactive Role Filter Switcher Lens -->
+            <div class="role-switcher-container">
+                <div class="role-switcher-title">Select Lens Mode:</div>
+                <div class="role-switcher">
+                    <button class="role-btn active" data-role="all">
+                        <i class="fas fa-layer-group"></i> All Overview
+                    </button>
+                    <button class="role-btn" data-role="devops">
+                        <i class="fas fa-server"></i> DevOps Lens
+                    </button>
+                    <button class="role-btn" data-role="fullstack">
+                        <i class="fas fa-code"></i> Full-Stack Lens
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Explore Projects
+                </a>
+                <a href="#terminal" class="btn btn-terminal">
+                    <i class="fas fa-terminal"></i> Interactive CLI
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-paper-plane"></i> Get In Touch
+                </a>
+            </div>
+
+            <!-- Key Metrics Banner -->
+            <div class="stats-banner">
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Upwork Job Success</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">CI/CD Code Coverage</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">65%</div>
+                    <div class="stat-label">Rx Process Efficiency</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Cloud Deployment Uptime</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Experience Timeline Section -->
+        <section id="about">
+            <div class="title-container">
+                <h2 class="section-title">About &amp; Experience</h2>
+                <p class="section-subtitle">Combining rigorous software engineering fundamentals with modern DevOps
+                    practices and system architecture.</p>
+            </div>
+
+            <div class="about-grid">
+                <!-- Profile Summary Card -->
+                <div class="about-profile-card">
+                    <div class="profile-avatar-container">
+                        <img src="resources/Coloured.png" alt="Muhammad Hasnain">
+                    </div>
+                    <div class="profile-info">
+                        <h3>Muhammad Hasnain</h3>
+                        <p>Software Engineer | DevOps &amp; Full-Stack</p>
+                    </div>
+                    <div class="profile-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BS Software Engineering (FAST NUCES, GPA: 3.1/4.0)</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Karachi, Sindh, Pakistan</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>mhussnainzardari34@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fab fa-github"></i>
+                            <span>github.com/Hasnain-rdj</span>
+                        </div>
+                    </div>
+
+                    <button class="blueprint-trigger-btn" onclick="openModal()">
+                        <i class="fas fa-sitemap"></i> View UML Architecture Work
+                    </button>
+                </div>
+
+                <!-- Experience Timeline -->
+                <div class="experience-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Freelance Software Developer &amp; System Architect</h3>
+                                    <span class="timeline-company">Upwork | Remote</span>
+                                </div>
+                                <span class="timeline-date">08/2022 – Present</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Engineered complex UML architectural diagrams (ERD, Use Case, Activity, Domain
+                                    Models) to translate business needs into technical blueprints.</li>
+                                <li>Maintained a <strong>100% Job Success Score</strong> delivering end-to-end
+                                    full-stack architectures and web solutions for international clients.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">Web Development &amp; Design Intern</h3>
+                                    <span class="timeline-company">Oasis Infobyte | Remote</span>
+                                </div>
+                                <span class="timeline-date">06/2026 – 07/2026</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Developed dynamic web solutions and enhanced front-end architecture using modern
+                                    JavaScript frameworks.</li>
+                                <li>Collaborated on automated development and deployment workflows to ensure streamlined
+                                    application delivery.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-role">SAP ABAP Intern</h3>
+                                    <span class="timeline-company">PARCO-CHQ | On-Site</span>
+                                </div>
+                                <span class="timeline-date">07/2025 – 08/2025</span>
+                            </div>
+                            <ul class="timeline-bullets">
+                                <li>Completed intensive 4-week on-site internship in enterprise resource planning within
+                                    SAP S4/HANA ecosystem.</li>
+                                <li>Programmed in SAP ABAP, developing and optimizing enterprise business applications.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Complete Skills Section (Vector SVG Icons for All Technologies) -->
+        <section id="skills">
+            <div class="title-container">
+                <h2 class="section-title">Technical Skills &amp; Tools</h2>
+                <p class="section-subtitle">Complete technical arsenal including programming languages, cloud
+                    operations, frontend frameworks, and databases.</p>
+            </div>
+
+            <!-- Skills Category Tabs -->
+            <div class="skills-filter-container">
+                <button class="skill-tab-btn active" data-category="all">
+                    <i class="fas fa-th"></i> All Skills
+                </button>
+                <button class="skill-tab-btn" data-category="devops">
+                    <i class="fas fa-cloud"></i> Cloud &amp; DevOps
+                </button>
+                <button class="skill-tab-btn" data-category="frontend">
+                    <i class="fas fa-desktop"></i> Frontend &amp; Full-Stack
+                </button>
+                <button class="skill-tab-btn" data-category="languages">
+                    <i class="fas fa-code"></i> Languages &amp; Core CS
+                </button>
+                <button class="skill-tab-btn" data-category="tools">
+                    <i class="fas fa-database"></i> Databases &amp; Dev Tools
+                </button>
+            </div>
+
+            <!-- Complete Skills Grid (Vector SVG Icons for All) -->
+            <div class="skills-grid">
+
+                <!-- Cloud & DevOps (Featured Highlights) -->
+                <div class="skill-card" data-category="devops" data-role="devops">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+                        alt="AWS">
+                    <p>AWS (EC2/S3)</p>
+                    <span class="skill-featured-tag devops">Featured DevOps</span>
+                </div>
+                <div class="skill-card" data-category="devops" data-role="devops">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg"
+                        alt="Terraform">
+                    <p>Terraform</p>
+                    <span class="skill-featured-tag devops">Featured DevOps</span>
+                </div>
+                <div class="skill-card" data-category="devops" data-role="devops">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                        alt="Docker">
+                    <p>Docker</p>
+                    <span class="skill-featured-tag devops">Featured DevOps</span>
+                </div>
+                <div class="skill-card" data-category="devops" data-role="devops">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg"
+                        alt="Kubernetes">
+                    <p>Kubernetes</p>
+                    <span class="skill-featured-tag devops">Featured DevOps</span>
+                </div>
+                <div class="skill-card" data-category="devops" data-role="devops">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg"
+                        alt="Jenkins">
+                    <p>Jenkins</p>
+                    <span class="skill-featured-tag devops">Featured DevOps</span>
+                </div>
+                <div class="skill-card" data-category="devops" data-role="devops">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg"
+                        alt="GitLab CI">
+                    <p>GitLab CI</p>
+                    <span class="skill-featured-tag devops">Featured DevOps</span>
+                </div>
+                <div class="skill-card" data-category="devops" data-role="devops">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg"
+                        alt="GitHub Actions">
+                    <p>GitHub Actions</p>
+                    <span class="skill-featured-tag devops">Featured DevOps</span>
+                </div>
+                <div class="skill-card" data-category="devops" data-role="devops">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+                        alt="Linux OS">
+                    <p>Linux OS</p>
+                    <span class="skill-featured-tag devops">Featured DevOps</span>
+                </div>
+                <div class="skill-card" data-category="devops" data-role="devops">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+                        alt="Azure">
+                    <p>Microsoft Azure</p>
+                    <span class="skill-badge-tag">Cloud Provider</span>
+                </div>
+                <div class="skill-card" data-category="devops" data-role="devops">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg"
+                        alt="Prometheus">
+                    <p>Prometheus</p>
+                    <span class="skill-featured-tag devops">Observability</span>
+                </div>
+                <div class="skill-card" data-category="devops" data-role="devops">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg"
+                        alt="Grafana">
+                    <p>Grafana</p>
+                    <span class="skill-featured-tag devops">Monitoring</span>
+                </div>
+                <div class="skill-card" data-category="devops" data-role="devops">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg"
+                        alt="Bash Scripting">
+                    <p>Bash / Shell</p>
+                    <span class="skill-badge-tag">Scripting</span>
+                </div>
+
+                <!-- Frontend & Full-Stack (Featured Highlights) -->
+                <div class="skill-card" data-category="frontend" data-role="fullstack">
+                    <img src="resources/react.png" alt="React.js">
+                    <p>React.js</p>
+                    <span class="skill-featured-tag fullstack">Featured Full-Stack</span>
+                </div>
+                <div class="skill-card" data-category="frontend" data-role="fullstack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+                        alt="Next.js">
+                    <p>Next.js</p>
+                    <span class="skill-featured-tag fullstack">Featured Full-Stack</span>
+                </div>
+                <div class="skill-card" data-category="frontend" data-role="fullstack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                        alt="TypeScript">
+                    <p>TypeScript</p>
+                    <span class="skill-featured-tag fullstack">Featured Full-Stack</span>
+                </div>
+                <div class="skill-card" data-category="frontend" data-role="fullstack">
+                    <img src="resources/js.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                    <span class="skill-featured-tag fullstack">Featured Full-Stack</span>
+                </div>
+                <div class="skill-card" data-category="frontend" data-role="fullstack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                        alt="Tailwind CSS">
+                    <p>Tailwind CSS</p>
+                    <span class="skill-featured-tag fullstack">Featured Full-Stack</span>
+                </div>
+                <div class="skill-card" data-category="frontend" data-role="fullstack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+                        alt="Bootstrap">
+                    <p>Bootstrap</p>
+                    <span class="skill-badge-tag">UI Framework</span>
+                </div>
+                <div class="skill-card" data-category="frontend" data-role="fullstack">
+                    <img src="resources/HTML.png" alt="HTML5">
+                    <p>HTML5</p>
+                    <span class="skill-badge-tag">Markup</span>
+                </div>
+                <div class="skill-card" data-category="frontend" data-role="fullstack">
+                    <img src="resources/css-3.png" alt="CSS3">
+                    <p>CSS3</p>
+                    <span class="skill-badge-tag">Styling</span>
+                </div>
+
+                <!-- Backend & Languages (Restored Original Skills) -->
+                <div class="skill-card" data-category="languages" data-role="fullstack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                        alt="Node.js">
+                    <p>Node.js</p>
+                    <span class="skill-featured-tag fullstack">Featured Backend</span>
+                </div>
+                <div class="skill-card" data-category="languages" data-role="fullstack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+                        alt="Express.js">
+                    <p>Express.js</p>
+                    <span class="skill-badge-tag">REST APIs</span>
+                </div>
+                <div class="skill-card" data-category="languages" data-role="languages">
+                    <img src="resources/python.png" alt="Python">
+                    <p>Python</p>
+                    <span class="skill-featured-tag lang">Core Language</span>
+                </div>
+                <div class="skill-card" data-category="languages" data-role="languages">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
+                        alt="FastAPI">
+                    <p>FastAPI</p>
+                    <span class="skill-badge-tag">Python Web</span>
+                </div>
+                <div class="skill-card" data-category="languages" data-role="languages">
+                    <img src="resources/letter-c.png" alt="C Language">
+                    <p>C Language</p>
+                    <span class="skill-featured-tag lang">Core Language</span>
+                </div>
+                <div class="skill-card" data-category="languages" data-role="languages">
+                    <img src="resources/c-.png" alt="C++">
+                    <p>C++</p>
+                    <span class="skill-featured-tag lang">Core Language</span>
+                </div>
+                <div class="skill-card" data-category="languages" data-role="languages">
+                    <img src="resources/c-sharp.png" alt="C#">
+                    <p>C#</p>
+                    <span class="skill-featured-tag lang">Core Language</span>
+                </div>
+                <div class="skill-card" data-category="languages" data-role="languages">
+                    <img src="resources/java.png" alt="Java">
+                    <p>Java</p>
+                    <span class="skill-featured-tag lang">Core Language</span>
+                </div>
+                <div class="skill-card" data-category="languages" data-role="languages">
+                    <img src="resources/haskell.png" alt="Haskell">
+                    <p>Haskell</p>
+                    <span class="skill-badge-tag">Functional CS</span>
+                </div>
+                <div class="skill-card" data-category="languages" data-role="languages">
+                    <img src="resources/R.png" alt="R Language">
+                    <p>R Language</p>
+                    <span class="skill-badge-tag">Data Analytics</span>
+                </div>
+                <div class="skill-card" data-category="languages" data-role="languages">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg"
+                        alt="Golang">
+                    <p>Golang</p>
+                    <span class="skill-badge-tag">Systems</span>
+                </div>
+
+                <!-- Databases & Tools (Restored Original Skills) -->
+                <div class="skill-card" data-category="tools" data-role="all">
+                    <img src="resources/mongodb.png" alt="MongoDB">
+                    <p>MongoDB</p>
+                    <span class="skill-featured-tag fullstack">NoSQL Database</span>
+                </div>
+                <div class="skill-card" data-category="tools" data-role="all">
+                    <img src="resources/database.png" alt="MySQL / SQL">
+                    <p>MySQL / SQL</p>
+                    <span class="skill-featured-tag fullstack">Relational DB</span>
+                </div>
+                <div class="skill-card" data-category="tools" data-role="all">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg"
+                        alt="Prisma ORM">
+                    <p>Prisma ORM</p>
+                    <span class="skill-badge-tag">Data Modeling</span>
+                </div>
+                <div class="skill-card" data-category="tools" data-role="devops">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                        alt="Git & GitHub">
+                    <p>Git &amp; GitHub</p>
+                    <span class="skill-badge-tag">Version Control</span>
+                </div>
+                <div class="skill-card" data-category="tools" data-role="all">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                        alt="VS Code">
+                    <p>VS Code / Cursor</p>
+                    <span class="skill-badge-tag">Dev IDE</span>
+                </div>
+                <div class="skill-card" data-category="tools" data-role="all">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+                        alt="Postman">
+                    <p>Postman</p>
+                    <span class="skill-badge-tag">API Testing</span>
+                </div>
+                <div class="skill-card" data-category="tools" data-role="all">
+                    <img src="resources/uml.png" alt="UML Design">
+                    <p>UML Design</p>
+                    <span class="skill-badge-tag">Architecture</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects">
+            <div class="title-container">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Real-world production deployments, automated infrastructure, microservices,
+                    and full-stack web applications.</p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+
+                <!-- 1. BidOps Job Marketplace Platform -->
+                <div class="project-card" data-role="hybrid">
+                    <div class="card-accent-line"></div>
+                    <div class="project-banner">
+                        <img src="resources/BidOps.png" alt="BidOps Job Marketplace Platform">
+                        <div class="project-tag-overlay">
+                            <span class="role-badge hybrid">AWS Cloud &amp; Full-Stack</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">BidOps (Job Marketplace Platform)</h3>
+                        <p class="project-desc">
+                            Provisioned and deployed a scalable full-stack job marketplace platform on an AWS production
+                            environment. Engineered scalable backend microservices, real-time bidding logic, and
+                            high-availability cloud infrastructure.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill">AWS EC2</span>
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">React.js</span>
+                            <span class="tech-pill">MongoDB</span>
+                            <span class="tech-pill">Terraform</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Hasnain-rdj" target="_blank" class="project-btn github">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://bid-acys5chiy-hasnain-rdjs-projects.vercel.app/login" target="_blank"
+                                class="project-btn demo">
+                                <i class="fas fa-external-link-alt"></i> Live App
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. THE-MovieBox -->
+                <div class="project-card" data-role="hybrid">
+                    <div class="card-accent-line"></div>
+                    <div class="project-banner">
+                        <img src="resources/THE-MovieBox.png" alt="THE-MovieBox Microservices & Cloud Platform">
+                        <div class="project-tag-overlay">
+                            <span class="role-badge hybrid">DevOps &amp; Microservices</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">THE-MovieBox (Cloud Infra &amp; Full-Stack)</h3>
+                        <p class="project-desc">
+                            Architected enterprise-grade microservices platform utilizing Next.js, Node.js, and MongoDB.
+                            Automated containerized deployments with Docker &amp; Kubernetes, codified AWS
+                            infrastructure via Terraform, and set up Prometheus &amp; Grafana monitoring.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill">Next.js</span>
+                            <span class="tech-pill">Docker</span>
+                            <span class="tech-pill">Kubernetes</span>
+                            <span class="tech-pill">Terraform</span>
+                            <span class="tech-pill">AWS</span>
+                            <span class="tech-pill">Prometheus</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Hasnain-rdj" target="_blank" class="project-btn github">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://the-movie-box-psi.vercel.app/" target="_blank" class="project-btn demo">
+                                <i class="fas fa-external-link-alt"></i> Live App
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. AI Smart Attendance Management System (A-Net) -->
+                <div class="project-card" data-role="fullstack">
+                    <div class="card-accent-line"></div>
+                    <div class="project-banner">
+                        <img src="resources/A-Net.png" alt="AI Smart Attendance Management System A-Net">
+                        <div class="project-tag-overlay">
+                            <span class="role-badge fullstack">AI &amp; Full-Stack</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">AI Smart Attendance Management (A-Net)</h3>
+                        <p class="project-desc">
+                            Engineered an AI-powered attendance verification platform using computer vision (FaceNet and
+                            MTCNN) with live classroom camera streams to automatically detect student presence and
+                            provide multi-role oversight dashboards.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill">Computer Vision</span>
+                            <span class="tech-pill">FaceNet</span>
+                            <span class="tech-pill">MTCNN</span>
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">React.js</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Hasnain-rdj" target="_blank" class="project-btn github">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://a-net-fast.vercel.app/login" target="_blank" class="project-btn demo">
+                                <i class="fas fa-external-link-alt"></i> Live App
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Mast Pharmacy -->
+                <div class="project-card" data-role="fullstack">
+                    <div class="card-accent-line"></div>
+                    <div class="project-banner">
+                        <img src="resources/MastPharmacy.png" alt="Veterinary Pharmacy Management System Mast Pharmacy">
+                        <div class="project-tag-overlay">
+                            <span class="role-badge fullstack">Full-Stack Platform</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Veterinary Pharmacy Management (Mast Pharmacy)</h3>
+                        <p class="project-desc">
+                            Full-stack veterinary pharmacy platform using React.js, Tailwind CSS, Node.js, and MongoDB.
+                            Includes real-time inventory tracking, AI medication interaction warnings, and sales
+                            analytics, reducing processing time by 65%.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill">React.js</span>
+                            <span class="tech-pill">Tailwind CSS</span>
+                            <span class="tech-pill">Node.js</span>
+                            <span class="tech-pill">MongoDB</span>
+                            <span class="tech-pill">AI Warnings</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Hasnain-rdj" target="_blank" class="project-btn github">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://mastpharmacy.netlify.app/login" target="_blank" class="project-btn demo">
+                                <i class="fas fa-external-link-alt"></i> Live App
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Automated CI/CD & Testing Pipeline -->
+                <div class="project-card" data-role="devops">
+                    <div class="card-accent-line"></div>
+                    <div class="project-banner">
+                        <img src="resources/SoftwareTesting.png" alt="Automated CI/CD Testing Pipeline">
+                        <div class="project-tag-overlay">
+                            <span class="role-badge devops">DevOps &amp; Testing</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Automated CI/CD &amp; Testing Pipeline</h3>
+                        <p class="project-desc">
+                            Orchestrated robust CI/CD pipelines using GitLab CI, Jenkins, and GitHub Actions.
+                            Containerized app environments with Docker and wired automated quality gates with JUnit
+                            &amp; Mockito achieving 95% code coverage.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill">GitLab CI</span>
+                            <span class="tech-pill">Jenkins</span>
+                            <span class="tech-pill">Docker</span>
+                            <span class="tech-pill">GitHub Actions</span>
+                            <span class="tech-pill">JUnit</span>
+                            <span class="tech-pill">Mockito</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Hasnain-rdj/Functionality_Unit_Testing.git" target="_blank"
+                                class="project-btn github" style="flex: 1;">
+                                <i class="fab fa-github"></i> Repository &amp; Tests
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. HealthBridge Migration & Web Calculator -->
+                <div class="project-card" data-role="devops">
+                    <div class="card-accent-line"></div>
+                    <div class="project-banner">
+                        <img src="resources/dev-lifecycle.png" alt="HealthBridge Monolith Migration & Web Calculator">
+                        <div class="project-tag-overlay">
+                            <span class="role-badge devops">DevOps &amp; Frontend</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">HealthBridge Monolith Migration &amp; Scientific Calculator</h3>
+                        <p class="project-desc">
+                            Designed the zero-downtime migration of a monolithic healthcare app to containerized
+                            microservices on AWS. Paired with a pure Vanilla JS scientific Web Calculator supporting
+                            complex logarithmic and trigonometric functions.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill">Docker</span>
+                            <span class="tech-pill">AWS</span>
+                            <span class="tech-pill">CI/CD</span>
+                            <span class="tech-pill">Vanilla JS</span>
+                            <span class="tech-pill">CSS3</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Hasnain-rdj/HealthBridge-Migration" target="_blank"
+                                class="project-btn github">
+                                <i class="fab fa-github"></i> Migration Repo
+                            </a>
+                            <a href="https://hasnain-rdj.github.io/Web_Calculator/" target="_blank"
+                                class="project-btn demo">
+                                <i class="fas fa-calculator"></i> Calculator Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Interactive Terminal CLI Section -->
+        <section id="terminal">
+            <div class="title-container">
+                <h2 class="section-title">Interactive DevOps Terminal</h2>
+                <p class="section-subtitle">Type shell commands directly in the window below to inspect system details,
+                    query projects, or trigger effects!</p>
+            </div>
+
+            <div class="terminal-container">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <span class="term-dot red"></span>
+                            <span class="term-dot yellow"></span>
+                            <span class="term-dot green"></span>
+                        </div>
+                        <span class="terminal-title">hasnain@devops-node: ~ (zsh)</span>
+                        <span>utf-8</span>
+                    </div>
+
+                    <div class="terminal-body" id="term-body">
+                        <div class="terminal-line">
+                            <span class="term-success">=====================================================</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="term-info">⚡ Welcome to Muhammad Hasnain's DevOps &amp; Full-Stack Shell
+                                ⚡</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="term-success">=====================================================</span>
+                        </div>
+                        <div class="terminal-line">
+                            Type <span class="term-warning">'help'</span> to view available system commands.
+                        </div>
+                        <div class="terminal-line">&nbsp;</div>
+
+                        <!-- Dynamic Terminal Output Area -->
+                        <div id="term-output"></div>
+
+                        <!-- Input Line -->
+                        <div class="term-input-wrapper">
+                            <span class="prompt-prefix">hasnain</span><span
+                                class="prompt-host">@devops-node</span>:<span class="prompt-path">~</span><span
+                                class="prompt-char">$</span>
+                            <input type="text" id="term-input" class="term-input" placeholder="type 'help'..."
+                                autocomplete="off" spellcheck="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="title-container">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Interested in collaborating on DevOps pipelines, cloud infrastructure, or
+                    full-stack web platforms?</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Direct Info Card -->
+                <div class="contact-card">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-list">
+                        <div class="contact-item-row">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text-group">
+                                <label>Email Address</label>
+                                <a href="mailto:mhussnainzardari34@gmail.com">mhussnainzardari34@gmail.com</a>
+                            </div>
+                            <button class="copy-btn" onclick="copyEmail()"><i class="far fa-copy"></i> Copy</button>
+                        </div>
+                        <div class="contact-item-row">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-text-group">
+                                <label>Phone &amp; WhatsApp</label>
+                                <a href="https://wa.me/923053694346" target="_blank">+92 305 3694346</a>
+                            </div>
+                        </div>
+                        <div class="contact-item-row">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-text-group">
+                                <label>Location</label>
+                                <span>Karachi, Sindh, Pakistan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Profiles Grid -->
+                <div class="contact-card">
+                    <h3>Find Me Online</h3>
+                    <div class="social-buttons-grid">
+                        <a href="https://github.com/Hasnain-rdj" target="_blank" class="social-tile">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-hasnain-966049235/" target="_blank"
+                            class="social-tile">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/hasnainn31" target="_blank" class="social-tile">
+                            <i class="fas fa-briefcase"></i> Upwork
+                        </a>
+                        <a href="https://wa.me/923053694346" target="_blank" class="social-tile">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://www.facebook.com/rdj.stark3718/" target="_blank" class="social-tile">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                        <a href="https://www.instagram.com/rdj.stark3718/" target="_blank" class="social-tile">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div>
+                &copy; 2026 <strong>Muhammad Hasnain</strong>. Built with Modern HTML5, CSS3 &amp; Vanilla JS.
+            </div>
+            <div>
+                <a href="#hero" style="color: var(--primary-cyan); text-decoration: none;">Back to top ↑</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Architecture Lightbox Modal -->
+    <div id="architecture-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-sitemap"></i> System Architecture &amp; UML Blueprints</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body-grid">
+                <div class="blueprint-card">
+                    <h4>Entity-Relationship Diagrams (ERD)</h4>
+                    <p>Database schema designs, relational integrity rules, NoSQL document modeling for high concurrency
+                        web applications.</p>
+                </div>
+                <div class="blueprint-card">
+                    <h4>Microservices &amp; Container Topology</h4>
+                    <p>Docker container orchestration, Kubernetes pod distribution, load balancing, and AWS
+                        infrastructure blueprints.</p>
+                </div>
+                <div class="blueprint-card">
+                    <h4>Sequence &amp; Activity Workflows</h4>
+                    <p>Detailed process flow diagrams translating enterprise business requirements into engineering
+                        specifications.</p>
+                </div>
+                <div class="blueprint-card">
+                    <h4>100% Upwork Success Record</h4>
+                    <p>Proven track record delivering technical system architecture designs and production web solutions
+                        for global clients.</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">My Skills</a></li>
-                <li><a href="#projects">Highlights</a></li>
-                <li><a href="#contact">Let's Collaborate</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Theme Toggle Floating Button -->
+    <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Light/Dark Theme">🌙</button>
 
-    <section id="about">
-        <div id="typewriter-container">
-            <span id="fixed-text">I'm</span><span id="typewriter"></span>
-        </div>
+    <!-- Email Copy Toast Notification -->
+    <div id="toast" class="toast">Email copied to clipboard! 🚀</div>
 
-        <div class="about-container">
-            <img src="resources/Coloured.png" alt="Your Name">
-            <p>Hello! I'm <strong class="highlight-name">Muhammad
-                    Hasnain</strong>, a
-                passionate programmer skilled in
-                multiple languages and
-                technologies. I love solving problems and building applications that make a difference.</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skills-container">
-            <!-- DevOps Skills -->
-            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
-                <p>Git</p>
-            </div>
-            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux">
-                <p>Linux</p>
-            </div>
-            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker">
-                <p>Docker</p>
-            </div>
-            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes">
-                <p>Kubernetes</p>
-            </div>
-            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt="Jenkins">
-                <p>Jenkins</p>
-            </div>
-            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" alt="Terraform">
-                <p>Terraform</p>
-            </div>
-            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS">
-                <p>AWS</p>
-            </div>
-            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="Azure">
-                <p>Azure</p>
-            </div>
-            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg" alt="Prometheus">
-                <p>Prometheus</p>
-            </div>
-            <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grafana/grafana-original.svg" alt="Grafana">
-                <p>Grafana</p>
-            </div>
-            
-            <!-- Other Skills -->
-            <div class="skill"><img src="resources/HTML.png" alt="HTML">
-                <p>HTML</p>
-            </div>
-            <div class="skill"><img src="resources/css-3.png" alt="">
-                <p>CSS</p>
-            </div>
-            <div class="skill"><img src="resources/js.png" alt="JavaScript">
-                <p>JavaScript</p>
-            </div>
-            <div class="skill"><img src="resources/python.png" alt="Python">
-                <p>Python</p>
-            </div>
-            <div class="skill"><img src="resources/letter-c.png" alt="C">
-                <p>C</p>
-            </div>
-            <div class="skill"><img src="resources/c-.png" alt="C++">
-                <p>C++</p>
-            </div>
-            <div class="skill"><img src="resources/c-sharp.png" alt="C#">
-                <p>C#</p>
-            </div>
-            <div class="skill"><img src="resources/java.png" alt="Java">
-                <p>Java</p>
-            </div>
-            <div class="skill"><img src="resources/haskell.png" alt="Haskell">
-                <p>Haskell</p>
-            </div>
-            <div class="skill"><img src="resources/database.png" alt="SQL">
-                <p>SQL</p>
-            </div>
-            <div class="skill"><img src="resources/react.png" alt="React">
-                <p>React</p>
-            </div>
-            <div class="skill"><img src="resources/R.png" alt="R">
-                <p>R</p>
-            </div>
-            <div class="skill"><img src="resources/mongodb.png" alt="MongoDB">
-                <p>MongoDB</p>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="projects">
-        <h2>Highlights</h2>
-
-        <div class="projects-grid">
-            <div class="project-category" onclick="window.open('https://github.com/Hasnain-rdj/HealthBridge-Migration', '_blank')" tabindex="0">
-                <div class="project">
-                    <div class="project-front">
-                        <div class="project-image">
-                            <!-- Using a high quality generic DevOps/Cloud architecture thumbnail -->
-                            <img src="resources/dev-lifecycle.png" alt="Picture not found">
-                        </div>
-                        <div class="project-header">
-                            <h3>HealthBridge Migration</h3>
-                            <div class="project-tech">
-                                <span class="tech-tag">Docker</span>
-                                <span class="tech-tag">CI/CD</span>
-                                <span class="tech-tag">AWS</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <p>
-                            Designed and executed the seamless migration of a monolithic healthcare platform to a highly scalable, containerized microservices architecture. By utilizing <strong>Docker</strong> and orchestrating the deployments through a robust <strong>CI/CD pipeline</strong>, this project ensures zero-downtime releases and resilient infrastructure. Emphasized strong security practices and infrastructure as code to maintain a compliant environment in the cloud.
-                        </p>
-                        <a href="https://github.com/Hasnain-rdj/HealthBridge-Migration" target="_blank" rel="noopener" class="project-btn">View Repository <i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-category" onclick="window.open('https://github.com/Hasnain-rdj/Functionality_Unit_Testing.git', '_blank')" tabindex="0">
-                <div class="project">
-                    <div class="project-front">
-                        <div class="project-image">
-                            <img src="resources/SoftwareTesting.png" alt="Software Quality Testing">
-                        </div>
-                        <div class="project-header">
-                            <h3>Software Quality Testing</h3>
-                            <div class="project-tech">
-                                <span class="tech-tag">Testing</span>
-                                <span class="tech-tag">QA</span>
-                                <span class="tech-tag">SDLC</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <p>
-                            In this project, I implemented advanced software quality assurance methodologies 
-                            across the entire development lifecycle. Using JUnit and Mockito, I created over 
-                            100 test cases achieving 95% code coverage for critical modules. I established 
-                            CI/CD pipelines with automated testing gates that reduced post-deployment issues 
-                            by 80% and accelerated the development cycle by 35%. This project demonstrates 
-                            my ability to ensure software reliability through systematic testing approaches.
-                        </p>
-                        <a href="https://github.com/Hasnain-rdj/Functionality_Unit_Testing.git" target="_blank" rel="noopener" class="project-btn">View Repository <i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-category" onclick="window.open('https://hasnain-rdj.github.io/Web_Calculator/', '_blank')" tabindex="0">
-                <div class="project">
-                    <div class="project-front">
-                        <div class="project-image">
-                            <img src="resources/WebCalculator.png" alt="Web-Based Calculator">
-                        </div>
-                        <div class="project-header">
-                            <h3>Web-Based Calculator</h3>
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <p>
-                            I engineered this interactive web calculator featuring a sleek, intuitive UI with 
-                            vanilla JavaScript, HTML5, and CSS3 without any external libraries. The application 
-                            includes standard arithmetic operations plus advanced scientific functions like 
-                            logarithms and trigonometry. It features robust error handling, customizable themes, 
-                            keyboard support for rapid calculations, and a responsive design that adapts 
-                            perfectly to any screen size. This project demonstrates my expertise in front-end 
-                            development and creating polished user experiences with pure JavaScript.
-                        </p>
-                        <a href="https://hasnain-rdj.github.io/Web_Calculator/" target="_blank" rel="noopener" class="project-btn">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-category" onclick="window.open('https://mastpharmacy.netlify.app/login', '_blank')" tabindex="0">
-                <div class="project">
-                    <div class="project-front">
-                        <div class="project-image">
-                            <img src="resources/MastPharmacy.png" alt="Veterinary Pharmacy Management">
-                        </div>
-                        <div class="project-header">
-                            <h3>Veterinary Pharmacy Management</h3>
-                            <div class="project-tech">
-                                <span class="tech-tag">React.js</span>
-                                <span class="tech-tag">TailwindCSS</span>
-                                <span class="tech-tag">Responsive</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <p>
-                            I developed this comprehensive veterinary pharmacy management system using React.js 
-                            with Context API for state management and TailwindCSS for a responsive UI that 
-                            works flawlessly across all devices. The system integrates with a Node.js/Express 
-                            backend API (hosted on Render.com) with MongoDB for data persistence. Key features 
-                            include real-time inventory tracking with automated alerts, electronic prescription 
-                            processing, AI-powered medication interaction warnings, customer profiles with 
-                            complete pet medical histories, and detailed sales analytics with customizable 
-                            reporting. The platform reduced prescription processing time by 65% and inventory 
-                            discrepancies by 87% in client implementations.
-                        </p>
-                        <a href="https://mastpharmacy.netlify.app/login" target="_blank" rel="noopener" class="project-btn">Live App <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Let's Collaborate</h2>
-        <div class="contact-container">
-            <div class="contact-text">
-                <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:contact@hasnain.dev">mhussnainzardari34@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+9200000000">+92 305 3694346</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <a href="https://wa.me/923053694346" target="_blank" rel="noopener">+92 305 3694346</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Karachi, Sindh, Pakistan</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="social-container">
-                <h3>Find Me On</h3>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/muhammad-hasnain-966049235/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
-                    <a href="https://www.facebook.com/rdj.stark3718/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
-                    <a href="https://www.instagram.com/rdj.stark3718/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-                    <a href="https://github.com/Hasnain-rdj" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-github"></i><span>GitHub</span></a>
-                    <a href="https://www.upwork.com/freelancers/hasnainn31" target="_blank" rel="noopener" class="social-btn"><i class="fas fa-briefcase"></i><span>Upwork</span></a>
-                    <a href="https://twitter.com/YourTwitterHandle" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">MH</div>
-            <p>&copy; 2025 Muhammad Hasnain. All Rights Reserved.</p>
-            <div class="footer-nav">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </footer>
-
-    <button id="theme-toggle">🌙</button>
     <script src="script.js"></script>
 </body>
 
