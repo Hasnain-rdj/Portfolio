@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             whoami: () => `
                 <div class="term-line"><span class="term-success">Muhammad Hasnain</span> - Software Engineer, DevOps Engineer & Full-Stack Developer.</div>
-                <div class="term-line">Graduating from FAST NUCES (GPA 3.1/4.0). Skilled in AWS, Terraform, Docker, Kubernetes, Jenkins, React.js, and Node.js.</div>
+                <div class="term-line">Graduated from FAST NUCES (GPA 3.11/4.0). Skilled in AWS, Terraform, Docker, Kubernetes, Jenkins, React.js, and Node.js.</div>
             `,
             skills: () => `
                 <div class="term-line"><span class="term-info">[Cloud & DevOps]:</span> AWS, Terraform, Docker, Kubernetes, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, Linux, Bash.</div>
