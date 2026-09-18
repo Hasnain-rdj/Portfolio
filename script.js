@@ -248,6 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
             help: () => `
                 <div class="term-line"><span class="term-info">Available Commands:</span></div>
                 <div class="term-line">  <span class="term-warning">whoami</span>       - Summary about Muhammad Hasnain</div>
+                <div class="term-line">  <span class="term-warning">resume</span>       - View & open official resumes on Google Drive</div>
                 <div class="term-line">  <span class="term-warning">skills</span>       - List DevOps & Full-Stack competencies</div>
                 <div class="term-line">  <span class="term-warning">projects</span>     - Display top enterprise & cloud projects</div>
                 <div class="term-line">  <span class="term-warning">experience</span>   - Display career timeline & education</div>
@@ -261,6 +262,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="term-line"><span class="term-success">Muhammad Hasnain</span> - Software Engineer, DevOps Engineer & Full-Stack Developer.</div>
                 <div class="term-line">Graduated from FAST NUCES (GPA 3.11/4.0). Skilled in AWS, Terraform, Docker, Kubernetes, Jenkins, React.js, and Node.js.</div>
             `,
+            resume: () => {
+                window.open('https://drive.google.com/drive/folders/146vbgHdxSk1pHaTCnVlwchDCtShVrWFl?usp=drive_link', '_blank');
+                return `
+                    <div class="term-line"><span class="term-success">Opening Resumes on Google Drive in a new tab... 📂</span></div>
+                    <div class="term-line">Link: <a href="https://drive.google.com/drive/folders/146vbgHdxSk1pHaTCnVlwchDCtShVrWFl?usp=drive_link" target="_blank" class="term-info">Open Google Drive Resumes Folder ↗</a></div>
+                `;
+            },
+            cv: () => {
+                window.open('https://drive.google.com/drive/folders/146vbgHdxSk1pHaTCnVlwchDCtShVrWFl?usp=drive_link', '_blank');
+                return `
+                    <div class="term-line"><span class="term-success">Opening Resumes on Google Drive in a new tab... 📂</span></div>
+                    <div class="term-line">Link: <a href="https://drive.google.com/drive/folders/146vbgHdxSk1pHaTCnVlwchDCtShVrWFl?usp=drive_link" target="_blank" class="term-info">Open Google Drive Resumes Folder ↗</a></div>
+                `;
+            },
             skills: () => `
                 <div class="term-line"><span class="term-info">[Cloud & DevOps]:</span> AWS, Terraform, Docker, Kubernetes, Jenkins, GitLab CI, GitHub Actions, Prometheus, Grafana, Linux, Bash.</div>
                 <div class="term-line"><span class="term-info">[Full-Stack & Languages]:</span> React.js, Next.js, Node.js, Express, TypeScript, Python, C, C++, C#, Java, Haskell, R, MongoDB, MySQL.</div>

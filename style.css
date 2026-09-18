@@ -302,6 +302,26 @@ nav ul li a:hover, nav ul li a.active {
     background: rgba(0, 242, 254, 0.1);
 }
 
+.nav-resume-btn {
+    background: rgba(0, 230, 118, 0.12) !important;
+    border: 1px solid rgba(0, 230, 118, 0.4) !important;
+    color: var(--devops-accent) !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 0 12px rgba(0, 230, 118, 0.15);
+}
+
+.nav-resume-btn:hover {
+    background: var(--devops-gradient) !important;
+    color: #05070a !important;
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.5) !important;
+    transform: translateY(-2px);
+}
+
 /* --- Hero Section --- */
 #hero {
     min-height: 100vh;
@@ -514,6 +534,18 @@ nav ul li a:hover, nav ul li a.active {
     transform: translateY(-3px);
 }
 
+.btn-resume {
+    background: var(--devops-gradient);
+    color: #05070a;
+    box-shadow: 0 0 25px rgba(0, 230, 118, 0.35);
+}
+
+.btn-resume:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 35px rgba(0, 230, 118, 0.65);
+    color: #000;
+}
+
 /* Stats Counter Banner */
 .stats-banner {
     display: grid;
@@ -640,6 +672,37 @@ nav ul li a:hover, nav ul li a.active {
 .detail-item i {
     color: var(--devops-accent);
     width: 20px;
+}
+
+.profile-card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.profile-resume-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    background: var(--devops-gradient);
+    color: #05070a;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
+}
+
+.profile-resume-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 230, 118, 0.6);
+    color: #000;
 }
 
 .blueprint-trigger-btn {
@@ -1300,6 +1363,26 @@ nav ul li a:hover, nav ul li a.active {
     box-shadow: 0 8px 20px rgba(0, 242, 254, 0.2);
 }
 
+.social-tile.resume-social-tile {
+    grid-column: 1 / -1;
+    background: rgba(0, 230, 118, 0.08);
+    border: 1px solid rgba(0, 230, 118, 0.35);
+    color: var(--text-primary);
+    justify-content: center;
+    font-weight: 700;
+}
+
+.social-tile.resume-social-tile i {
+    color: var(--devops-accent);
+}
+
+.social-tile.resume-social-tile:hover {
+    background: rgba(0, 230, 118, 0.18);
+    border-color: var(--devops-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 230, 118, 0.3);
+}
+
 /* --- Architecture Modal Lightbox --- */
 .modal {
     position: fixed;
@@ -1471,8 +1554,8 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header { width: 95%; padding: 10px 20px; }
-    nav ul { gap: 12px; }
+    header { width: 95%; padding: 10px 15px; }
+    nav ul { gap: 10px; flex-wrap: wrap; justify-content: center; }
     nav ul li a { font-size: 0.85rem; padding: 6px 10px; }
     .hero-title { font-size: 2.3rem; }
     .typewriter-box { font-size: 1.3rem; }
