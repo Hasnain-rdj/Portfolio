@@ -285,6 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="term-line">2. <span class="term-success">THE-MovieBox</span>: <a href="https://the-movie-box-psi.vercel.app/" target="_blank" class="term-info">the-movie-box-psi.vercel.app</a></div>
                 <div class="term-line">3. <span class="term-success">A-Net</span>: <a href="https://a-net-fast.vercel.app/login" target="_blank" class="term-info">a-net-fast.vercel.app</a></div>
                 <div class="term-line">4. <span class="term-success">Mast Pharmacy</span>: <a href="https://mastpharmacy.netlify.app/login" target="_blank" class="term-info">mastpharmacy.netlify.app</a></div>
+                <div class="term-line">5. <span class="term-success">Ciphers</span>: <a href="https://isciphers.netlify.app/" target="_blank" class="term-info">isciphers.netlify.app</a></div>
             `,
             blueprint: () => {
                 openModal();
